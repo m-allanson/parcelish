@@ -80,14 +80,3 @@ for (const module in config) {
     await workerFarm.end();
   }
 })();
-
-// tasks = [
-//   async () => {
-//     await new Promise((resolve) => setTimeout(resolve, 1000));
-//     console.log(`waited: 1000ms`);
-//   },
-//   async () => {
-//     await new Promise((resolve) => setTimeout(resolve, 500));
-//     console.log(`waited: 500ms`);
-//   },
-// ];

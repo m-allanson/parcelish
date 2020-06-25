@@ -1,2 +1,2 @@
-const syntaxB = require("stylelint/lib/syntaxes/syntax-html.js");
+const syntaxB = "bar";
 module.exports = syntaxB;

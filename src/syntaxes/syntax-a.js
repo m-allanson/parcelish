@@ -1,2 +1,2 @@
-const syntaxA = require("stylelint/lib/syntaxes/syntax-css-in-js.js");
+const syntaxA = "foo";
 module.exports = syntaxA;

@@ -1,3 +1,5 @@
-const lint = require("stylelint/lib/browser.js");
+const lint = () => {
+  true;
+};
 
 module.exports = lint;

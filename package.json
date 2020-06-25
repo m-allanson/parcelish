@@ -5,7 +5,7 @@
     "clear": "rm -r .parcel-cache && rm -r dist"
   },
   "dependencies": {
-    "pad-left": "^2.1.0",
-    "parcel": "^2.0.0-beta.1"
+    "parcel": "^2.0.0-beta.1",
+    "stylelint": "stylelint/stylelint#20516376be388aebb9042e9da64d77ce0710602a"
   }
 }

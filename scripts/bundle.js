@@ -5,23 +5,32 @@ const Parcel = require("@parcel/core").default;
 const { createWorkerFarm } = require("@parcel/core");
 
 const config = {
-  yep: {
+  core: {
     target: {
       includeNodeModules: true,
       outputFormat: "esmodule",
       isLibrary: true,
     },
-    entry: "src/a-module.js",
+    entry: "src/core.js",
     dest: "dist/main-bundle.js",
   },
-  "optional-module": {
+  "syntax-a": {
     target: {
       includeNodeModules: true,
       outputFormat: "esmodule",
       isLibrary: true,
     },
-    entry: "src/stuff/optional-module.js",
-    dest: "dist/optional.js",
+    entry: "src/syntaxes/syntax-a.js",
+    dest: "dist/syntax-a.js",
+  },
+  "syntax-b": {
+    target: {
+      includeNodeModules: true,
+      outputFormat: "esmodule",
+      isLibrary: true,
+    },
+    entry: "src/syntaxes/syntax-b.js",
+    dest: "dist/syntax-b.js",
   },
 };
 

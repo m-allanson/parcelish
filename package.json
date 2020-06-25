@@ -1,5 +1,6 @@
 {
   "name": "parcelish",
+  "main": "src/index.js",
   "scripts": {
     "bundle": "node scripts/bundle.js",
     "clear": "rm -r .parcel-cache && rm -r dist"

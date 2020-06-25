@@ -35,6 +35,7 @@ const config = {
     entry: "src/syntaxes/syntax-b.js",
     dest: "dist/syntax-b.js",
   },
+  // etc...
 };
 
 let tasks = [];
@@ -43,6 +44,8 @@ let workerFarm = createWorkerFarm();
 for (const module in config) {
   let task = async () => {
     let bundler = new Parcel({
+      entries: config[module].entry,
+      target: config[module].target,
       defaultConfig: {
         ...defaultConfigContents,
         filePath: require.resolve("@parcel/config-default"),
@@ -51,14 +54,12 @@ for (const module in config) {
         browsers: ["> 0.25%"],
       },
       disableCache: true,
-      entries: config[module].entry,
       isLibrary: true,
       logLevel: "warn",
       minify: false,
       mode: "production",
       outputFormat: "esmodule",
       patchConsole: false,
-      target: config[module].target,
       workerFarm,
     });
 

@@ -70,9 +70,9 @@ for (const module in config) {
 
 (async () => {
   try {
-    for (const [name, fn] of tasks) {
-      await fn();
-      console.log(`bundled ${name}`);
+    for (const [module, task] of tasks) {
+      await task();
+      console.log(`bundled ${module}`);
     }
   } catch (error) {
     console.error(error);
